@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Application architecture
+- Use flat TanStack content routes with unique leaf metadata and a shared site shell in the root provider; this keeps navigation and page identities consistent.
+- Keep prototype interactions in a shared React context without browser storage or backend accounts; demo data is ephemeral and must not be presented as verified.
+- Keep shared listings, filtering and completion calculations in a browser-safe module, with focused rule tests; this makes demonstration behavior consistent across pages.
